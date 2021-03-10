@@ -4,7 +4,7 @@ public class Factorial {
 	public static int factorial(int n) {
 		
 		if(n ==0) {
-			return 1;
+			return 1;            // Base case
 		}
 		
 		int divideProb = factorial(n-1);   // function calling itself
