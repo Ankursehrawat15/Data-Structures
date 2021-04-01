@@ -30,3 +30,33 @@ public static boolean checkNumber(int input[], int x, int index) {
         
         
 	}
+
+// can also do this
+
+ public static boolean checkNumber(int input[], int x, int index) {
+		
+        if(index == input.length) return false;
+        
+        if(input[index] == x)
+        {
+            return true;
+        }
+        
+        
+        boolean  smallAns = checkNumber(input , x , index+1);
+      
+        if(!(smallAns)){
+            return false;
+        }else{
+            return true;
+        }
+      
+      
+	}
+	
+	public static boolean checkNumber(int input[], int x) {
+		
+        return checkNumber(input , x , 0);
+        
+        
+	}
