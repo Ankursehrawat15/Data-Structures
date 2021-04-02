@@ -1,18 +1,32 @@
-  public static void sortZeroesAndOne(int[] arr) {
-     
-    int num = 0;
-        for(int i =0;i<arr.length;i++){
+public static int findUnique(int[] arr){
+		
+        for(int i=0;i<arr.length;i++){
             
-            if(arr[i] == 0){
+            int count = 0;
+            for(int j =0;j<arr.length;j++){
+                
+                if(i == j){
+                    continue;
+                }
                 
                 
-                int temp = arr[num];
-                arr[num] = arr[i];
-                arr[i] = temp;
-                num++;
+                if(arr[i] == arr[j]){
+                    
+                    count++;
+                    break;
+              }
+                
+                
+            }
+            
+            if(count == 0){
+                
+                return arr[i];
             }
             
             
         }
+        
+        return -1;
         
     }
