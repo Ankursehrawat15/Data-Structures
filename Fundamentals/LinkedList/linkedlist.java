@@ -44,6 +44,39 @@ public static Node<Integer> takeInput() {
 		return head;
 	}
 
+// Time complexity => o(n)
+
+public static Node<Integer> takeInput() {
+
+		Node<Integer> head = null;
+		Node<Integer> tail = null;
+
+		Scanner scan = new Scanner(System.in);
+		int data = scan.nextInt();
+
+		while (data != -1) {
+
+			Node<Integer> newNode = new Node<>(data);
+			if (head == null) {
+				head = newNode;
+				tail = newNode;
+			} else {
+				
+				tail.next  = newNode;
+				tail = tail.next;
+
+			}
+
+			data = scan.nextInt();
+
+		}
+
+		return head;
+	}
+
+
+
+
 // method for printing the linkedlist
 
 	public static void print(Node<Integer> head) {
