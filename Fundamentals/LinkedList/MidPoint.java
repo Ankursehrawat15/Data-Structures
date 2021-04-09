@@ -25,4 +25,41 @@ static int midPoint(Node<Integer> head ) {
 		
 		
 	}
+
+//
+    public static LinkedListNode<Integer> midPoint(LinkedListNode<Integer> head) {
+        
+        
+        if(head == null ){
+          return head;    
+            }
+        LinkedListNode<Integer> tail = head;
+        while(tail.next != null){
+            
+            tail = tail.next;
+        }
+        
+        
+        LinkedListNode<Integer> slow = head;
+           LinkedListNode<Integer> fast = head;
+        
+        while(fast.next != null ){
+            
+            if(fast.next == tail){
+                return slow;
+            }
+            
+            slow = slow.next;
+            fast =fast.next.next;
+            
+            
+        }
+        
+        return slow;
+        
+        
+       
+       
+    }
+
 	
