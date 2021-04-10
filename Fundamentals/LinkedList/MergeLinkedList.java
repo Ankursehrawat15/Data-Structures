@@ -5,7 +5,7 @@ static Node<Integer> mergeLinkedList(Node<Integer> head1 , Node<Integer> head2){
 		
 		Node<Integer> l1= head1;
 		Node<Integer> l2= head2;
-		
+		if(l1 == null || l2 == null) return l1==null ? l1 : l2;
 		Node<Integer> newList = new Node<>(-1);
 		Node<Integer> tail = newList;
 		while(l1 != null && l2 != null) {
@@ -28,6 +28,11 @@ static Node<Integer> mergeLinkedList(Node<Integer> head1 , Node<Integer> head2){
 		
 		
 		return newList.next;
+		
+		
+		
+		
+		
 		
 	}
 	
