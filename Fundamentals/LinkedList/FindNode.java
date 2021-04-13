@@ -19,3 +19,19 @@ public static int findNode(LinkedListNode<Integer> head, int n) {
         
         return -1;
 	}
+
+// recursivly 
+public static int findNodeRec(LinkedListNode<Integer> head, int n, int index) {
+    	if(head == null || head.next == null ) return -1;
+    
+    if(head.data == n){
+        return index;
+    }
+    int smallAns = findNodeRec(head.next , n , index+1);
+    
+    return smallAns;
+	}
+
+	public static int findNodeRec(LinkedListNode<Integer> head, int n) {
+    	return findNodeRec(head , n , 0);
+	}
