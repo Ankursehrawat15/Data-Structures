@@ -36,13 +36,19 @@ private int[] data;
 
 	public void push(int elem) throws StackFullException {
 		if (size() == data.length) {
-			// StackFullException
-			StackFullException e = new StackFullException();
-			throw e;
+			doubleCapacity();
 		}
 
 		top++;
 		data[top] = elem;
+
+	}
+               private void doubleCapacity() {
+		int[] temp = data;
+		data = new int[2 * temp.length];
+		for (int i = 0; i <= top; i++) {
+			data[i] = temp[i];
+		}
 
 	}
 
