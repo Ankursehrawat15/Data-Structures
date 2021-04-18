@@ -1,4 +1,4 @@
-
+public class QueuesUsingArrays {
 	private int [] data;
 	private int front;
 	private int rear;
