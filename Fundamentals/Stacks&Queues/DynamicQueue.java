@@ -12,6 +12,7 @@
 		for(int i = 0; i <= front-1 ; i++) {
 			
 			data[index] = temp[i];
+			index++;
 		}
 		
 		front = 0;
