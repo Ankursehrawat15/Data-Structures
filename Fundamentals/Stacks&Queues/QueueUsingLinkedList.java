@@ -47,6 +47,9 @@ public class Queue {
         
         int temp = front.data;
         front = front.next;
+	    if(size == 1){
+		    rear = null;
+	    }
         size--;
         return temp;
     	
