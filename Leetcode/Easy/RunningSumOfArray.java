@@ -13,7 +13,7 @@ int [] arr = new int[nums.length];
         return arr;
     }
 
-// first Approach
+// first Approach.
  int [] arr = new int[nums.length];
         for(int i =0;i<arr.length;i++){
             int sum =0;
