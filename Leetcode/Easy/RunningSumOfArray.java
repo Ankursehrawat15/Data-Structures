@@ -25,3 +25,8 @@ int [] arr = new int[nums.length];
         }
         
         return arr;
+ // best approach
+        for(int i =1;i<arr.length;i++){
+            nums[i] = nums[i] + nums[i-1];
+        }
+        return nums;
