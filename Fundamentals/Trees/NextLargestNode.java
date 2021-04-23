@@ -16,13 +16,14 @@ public static Queue<TreeNode<Integer>> findNextLargestNode(TreeNode<Integer> roo
 	}
 
 	public static TreeNode<Integer> findNextLargestNode(TreeNode<Integer> root, int n) {
+		TreeNode<Integer> nextLargestNode = null;
 		if (root == null) {
-			TreeNode<Integer> node = null;
-			return node;
+			
+			return nextLargestNode;
 		}
 		Queue<TreeNode<Integer>> queue = new LinkedList<>();
 		queue = findNextLargestNode(root, n, queue);
-		TreeNode<Integer> nextLargestNode = null;
+		
 		int smallest = Integer.MAX_VALUE;
 		while (!queue.isEmpty()) {
 			TreeNode<Integer> newNode = queue.poll();
