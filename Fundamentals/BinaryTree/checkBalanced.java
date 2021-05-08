@@ -63,3 +63,56 @@ public static int height(BinaryTreeNode<Integer> root) {
 		}
 
 	}
+
+
+// 2nd approach
+	class Pair {
+		int height;
+		boolean isBalanced;
+	}
+
+	public class Solution {
+	    
+	    public static Pair isBalanced(BinaryTreeNode<Integer> root){
+	        
+	        if(root == null){
+	            Pair output = new Pair();
+	            output.isBalanced = true;
+	            output.height = 0;
+	            return output;
+	        }
+	        
+	        
+	        Pair leftTree  = isBalanced(root.left);
+	        Pair rightTree = isBalanced(root.right);
+	        
+	        
+	        Pair rootBalanced = new Pair();
+	        if(Math.abs(leftTree.height - rightTree.height) <= 1 && leftTree.isBalanced && rightTree.isBalanced ){
+	            
+	        
+	                rootBalanced.height = Math.max(leftTree.height, rightTree.height) + 1;
+	                rootBalanced.isBalanced = true;
+	                
+	       
+	         
+	            
+	            
+	        }else{
+	            
+	            rootBalanced.isBalanced = false;
+	           
+	        }
+	        
+	        
+	        return rootBalanced;
+	        
+	        
+	    }
+
+
+		public static boolean checkBalanced(BinaryTreeNode<Integer> root) {
+	       
+	        return isBalanced(root).isBalanced;
+		
+		}
