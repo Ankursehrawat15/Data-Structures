@@ -13,9 +13,37 @@ class BinaryTreeNode<T>{
 
 
 public class BinarySearchTree {
+	private BinaryTreeNode<Integer> root;
+	
+	// Inserting a node intp the tree
+	private BinaryTreeNode<Integer> insertHelper(BinaryTreeNode<Integer> root, int data) {
+		if (root == null) {
+			BinaryTreeNode<Integer> rootNode = new BinaryTreeNode<>(data);
+			return rootNode;
+		}
 
-private BinaryTreeNode<Integer> root;
+		if (data >= root.data) {
 
+			root.right = insertHelper(root.right, data);
+		}
+
+		if (data < root.data) {
+
+			root.left = insertHelper(root.left, data);
+		}
+
+		return root;
+
+	}
+
+	public void insert(int data) {
+
+		root = insertHelper(root, data);
+
+	}
+
+
+   // searching the node in the tree
 private boolean hasDataHelper(int data , BinaryTreeNode<Integer> root) {
 	if(root == null) {
 		return false;
@@ -35,5 +63,8 @@ private boolean hasDataHelper(int data , BinaryTreeNode<Integer> root) {
 public boolean hasData(int data) {
 	return hasDataHelper(data , root);
 }
+	
+	// deleting a node in the tree
+	// printing the tree
 
 }
