@@ -11,5 +11,5 @@ public static ArrayList<Integer> removeDuplicates(int[] arr) {
         }
 
 
-        return newList
+        return newList;
     }
