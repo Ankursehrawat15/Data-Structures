@@ -38,29 +38,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Approach 1 --> Time Compelxity O(N^2)
 class Solution {
 	public ListNode deleteDuplicates(ListNode head) {
