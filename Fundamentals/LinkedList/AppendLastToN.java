@@ -4,13 +4,13 @@
 		}
 
 		LinkedListNode<Integer> temp = head;
-		int length = 0;
-		while (temp != null) {
+		LinkedListNode<Integer> tail = head;
+		int length = 1;
+		while (tail.next != null) {
 			length++;
-			temp = temp.next;
+			tail = tail.next;
 		}
 
-		temp = head;
 		int i = 0;
 		while (i < length - n - 1) {
 			i++;
@@ -20,13 +20,7 @@
 		LinkedListNode<Integer> newHead = temp.next;
 		temp.next = null;
 
-		temp = newHead;
-		while (temp.next != null) {
-			temp = temp.next;
-
-		}
-
-		temp.next = head;
+		tail.next = head;
 
 		return newHead;
 
