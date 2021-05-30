@@ -1,3 +1,4 @@
+// Approach 1 --> Time complexity O(N) and space Complexity O(N)
 class Solution {
     public boolean isPalindrome(ListNode head) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -28,3 +29,7 @@ class Solution {
         
     }
 }
+
+
+// Another Approach 
+
