@@ -4,12 +4,8 @@ LINK: https://leetcode.com/problems/remove-linked-list-elements/
         
      if(head == null) return head;
         
-        ListNode sub = removeElements(head.next , val);
-        if(head.val == val){
-            return sub;
-        }else{
-            head.next = sub;
-            return head;
-        }
+      head.next = removeElements(head.next , val);
+        return head.val == val ? head.next : head;
+      
         
     }
