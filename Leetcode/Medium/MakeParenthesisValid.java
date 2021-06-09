@@ -21,7 +21,7 @@
         return count;
     }
 
-// Two Pointers
+// Two Pointers approach
 // space O(1) and time O(N)
   public int minAddToMakeValid(String s) {
         
