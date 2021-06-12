@@ -1,8 +1,7 @@
 // Time Complexity O(N) and space Complexity O(N) 
 public boolean isValid(String s) {
 
-		if (s.charAt(0) == ')' || s.charAt(0) == ']' || s.charAt(0) == '}')
-			return false;
+		
 		Stack<Character> stack = new Stack<>();
 
 		for (int i = 0; i < s.length(); i++) {
