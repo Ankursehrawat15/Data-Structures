@@ -41,3 +41,59 @@ class Solution {
         return construct(list);
     }
 }
+
+
+
+
+// Another Way
+class Pair{
+    TreeNode root;
+    TreeNode tail;
+}
+
+class Solution {
+   
+    public Pair construct(TreeNode root){
+        if(root == null){
+            Pair output = new Pair();
+            return output;
+        }
+        
+        Pair left = construct(root.left);
+        Pair right = construct(root.right);
+        TreeNode node = new TreeNode(root.val);
+        
+        Pair output = new Pair();
+        if(left.tail != null){
+            left.tail.right = node; 
+        }
+        
+        if(right.root != null){
+          node.right = right.root; 
+        }
+        
+        
+        if(left.root != null){
+            output.root = left.root;
+        }else{
+            output.root = node;
+        }
+        
+        if(right.tail != null){
+            output.tail = right.tail;
+        }else{
+            output.tail = node;
+        }
+        
+        
+        return output;
+        
+    }
+   
+    public TreeNode increasingBST(TreeNode root) {
+        
+    
+        
+        return construct(root).root;
+    }
+}
