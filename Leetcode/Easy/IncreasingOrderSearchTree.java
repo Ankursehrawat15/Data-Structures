@@ -1,3 +1,31 @@
+// best Approach
+class Solution {
+   
+    TreeNode curr;
+    
+    public void inOrder(TreeNode root){
+        if(root == null) return;
+        
+        inOrder(root.left);
+        curr.right = root;
+         root.left = null;
+        curr = root;
+        inOrder(root.right);
+    }
+   
+    public TreeNode increasingBST(TreeNode root) {
+        
+      TreeNode ans = new TreeNode(0);
+        curr = ans;
+       inOrder(root);
+        
+        return ans.right;
+    }
+}
+
+
+
+
 class Solution {
     
     public void inOrder(TreeNode root , List<Integer> list){
