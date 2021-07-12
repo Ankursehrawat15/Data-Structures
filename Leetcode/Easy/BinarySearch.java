@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Leetcode: https://leetcode.com/problems/binary-search/
 
 class Solution {
@@ -7,6 +9,7 @@ class Solution {
         int end = nums.length - 1;
 
         while (start <= end) {
+            int val = 2;
 
             int mid = (start + end) / 2;
 
