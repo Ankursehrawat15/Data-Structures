@@ -1,5 +1,22 @@
 // letcode :- https://leetcode.com/problems/remove-element/
 public class RemoveElement {
+
+    public int removeElementDiscussionAns(int[] nums, int val) {
+
+        int count = 0;
+
+        for (int elem : nums) {
+
+            if (elem != val) {
+                nums[count] = elem;
+                count++;
+            }
+        }
+
+        return count;
+
+    }
+
     public int removeElement(int[] nums, int val) {
         int count = nums.length;
         for (int i = 0; i < nums.length; i++) {
