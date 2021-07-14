@@ -1,10 +1,10 @@
-import java.util.Scanner;
 
 // Leetcode: https://leetcode.com/problems/binary-search/
 
 class Solution {
 
     public int binarySearch(int[] nums, int target) {
+
         int start = 0;
         int end = nums.length - 1;
 
