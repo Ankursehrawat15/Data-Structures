@@ -1,6 +1,8 @@
 // leetcode: https://leetcode.com/problems/product-of-array-except-self/
 public class ProductOfArray {
 
+    // Time complexity - O(N^2)
+    // Space Complexity - O(1)
     public int[] productExceptSelf(int[] nums) {
 
         int[] ans = new int[nums.length];
