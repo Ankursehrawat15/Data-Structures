@@ -26,3 +26,28 @@ class Solution {
             
     }
 }
+
+
+// Time complexity is O(N) and Space Complexity is O(1)
+ public int majorityElement(int[] nums) {
+        // Moore's Voting Algorithm
+            int iteration = 1;
+            int elem = nums[0];
+            for(int i =1;i<nums.length;i++)
+            {
+                if(nums[i] == elem){
+                        iteration++;
+                }else{
+                        if(iteration == 0){
+                            
+                           elem = nums[i];
+                           iteration = 1;
+                        }else{
+                                iteration--;
+                        }
+                }    
+            }
+            
+            return elem;
+            
+    }
