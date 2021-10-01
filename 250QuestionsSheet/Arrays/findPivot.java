@@ -27,3 +27,31 @@ class Solution {
             return -1;
     }
 }
+
+
+class Solution {
+    public int pivotIndex(int[] nums) {
+       int sum = 0;
+            for(int num : nums){
+                    sum += num;
+            }
+            
+        int lSum = 0;
+        int rightSum = sum;
+            
+            for(int i =0;i<nums.length;i++){
+                 
+                    rightSum = rightSum - nums[i];
+                    
+                    if(rightSum == lSum){
+                            return i ;
+                    }
+                    
+                    lSum = lSum + nums[i];
+            }
+            
+            
+            return -1;
+            
+    }
+}
