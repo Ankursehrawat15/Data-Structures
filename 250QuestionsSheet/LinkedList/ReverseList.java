@@ -20,3 +20,21 @@ class Solution {
         
     }
 }
+
+
+
+// recursive approach tc o(N) and space is o(N)
+  public ListNode reverseList(ListNode head) {
+        
+     if(head == null || head.next == null) return head;
+        
+        ListNode secondLast_head = head.next;
+        
+        ListNode newHead = reverseList(head.next);
+        
+            secondLast_head.next = head;
+        head.next = null;
+        
+        return newHead;
+        
+    }
